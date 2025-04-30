@@ -1,0 +1,43 @@
+body{
+  color:#black;
+  font-family: Times New Roman;
+}
+h1{
+  color: darkcyan;
+  font-family: Sans-Serif;
+}
+h2{
+  color: cyan;
+}
+h3,h4,h5,h6{
+  color: #rgb(#202,11,60);
+}
+#tribe{
+  color: indigo;
+  font-family: Verdana;
+}
+.if{
+  font-family: Comic Sans MS;
+  color: #rgb(#33,44,66);
+  background-color: #00012511;
+
+a{
+  color: pink;
+  font-family: Arial;
+
+}
+#in{
+  color: blue;
+}
+#important{
+  background-color: grey;
+  }
+  #nile{
+    background-color: violet;
+  }
+  .myraid{
+    background-color: 3e5577;
+  }
+  #header{
+    background-color: darkcyan;
+  }
