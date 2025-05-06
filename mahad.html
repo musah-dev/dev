@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uganda | The Pearl of Africa | Official Tourism Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1A5D1A;      /* Deep Uganda green */
+      --secondary: #F9A825;    /* Golden yellow */
+      --accent: #C62828;       /* Rich red */
+      --dark: #263238;         /* Dark text */
+      --light: #F5F5F5;        /* Light background */
+      --neutral: #ECEFF1;      /* Neutral tones */
+      --water: #0277BD;        /* Nile blue */
+      --highlight: #FFD600;     /* Highlight color */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      background-color: var(--light);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary), #2E7D32);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    .main-nav {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 1.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--secondary);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('img/uganda-hero.jpg') center/cover no-repeat;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 60px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      max-width: 600px;
+      padding: 40px;
+      background: rgba(0,0,0,0.6);
+      border-left: 5px solid var(--secondary);
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hero p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    /* Feature Boxes */
+    .section-title {
+      text-align: center;
+      margin: 60px 0 40px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: var(--primary);
+      display: inline-block;
+      padding: 0 20px;
+      background-color: var(--light);
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--neutral);
+      z-index: 0;
+    }
+
+    .feature-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .feature-box {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .feature-img-container {
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .feature-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .feature-box:hover .feature-img {
+      transform: scale(1.05);
+    }
+
+    .feature-content {
+      padding: 25px;
+    }
+
+    .feature-content h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .feature-content p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    /* Attractions Section */
+    .attractions {
+      background-color: var(--neutral);
+      padding: 60px 0;
+      margin: 60px 0;
+    }
+
+    .attraction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .attraction-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .attraction-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .attraction-info {
+      padding: 20px;
+    }
+
+    .attraction-info h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .attraction-info .location {
+      color: var(--water);
+      margin-bottom: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    .location i {
+      margin-right: 8px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 60px 0;
+    }
+
+    .testimonial-slider {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 20px;
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 60px;
+      color: var(--neutral);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .author-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    .author-info h4 {
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .author-info p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* CTA Section */
+    .cta {
+      background: linear-gradient(135deg, var(--primary), #2E7D32);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      margin-bottom: 60px;
+    }
+
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-column h3 {
+      color: var(--secondary);
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: white;
+      background-color: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+
+    .social-links a:hover {
+      background-color: var(--secondary);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: var(--secondary);
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--highlight);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #B71C1C;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      margin-left: 15px;
+    }
+
+    .btn-outline:hover {
+      background-color: white;
+      color: var(--primary);
+    }
+
+    /* Utility Classes */
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-20 {
+      margin-bottom: 20px;
+    }
+
+    .mb-40 {
+      margin-bottom: 40px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        margin-top: 15px;
+      }
+
+      .nav-links li {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      .hero {
+        height: 400px;
+      }
+
+      .hero-content {
+        padding: 20px;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 15px;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="container">
+      <h1>Uganda</h1>
+      <p class="subtitle">The Pearl of Africa - Discover breathtaking landscapes, diverse wildlife, and rich cultural heritage</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">Uganda Tourism</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#about">About Uganda</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Discover Uganda's Untamed Beauty</h2>
+      <p>From the source of the Nile to mountain gorilla trekking, Uganda offers unparalleled wildlife experiences and breathtaking landscapes that will leave you in awe.</p>
+      <a href="#destinations" class="btn btn-primary">Explore Destinations</a>
+      <a href="#contact" class="btn btn-outline">Plan Your Trip</a>
+    </div>
+  </section>
+
+  <!-- Feature Boxes -->
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Visit Uganda?</h2>
+    </div>
+
+    <div class="feature-boxes">
+      <div class="feature-box">
+        <div class="feature-img-container">
+          <img src="img/gorilla-trekking.jpg" alt="Mountain Gorilla Trekking" class="feature-img">
+        </div>
+        <div class="feature-content">
+          <h3>Gorilla Trekking</h3>
+          <p>Experience the thrill of encountering mountain gorillas in their natural habitat at Bwindi Impenetrable National Park, home to nearly half of the world's remaining mountain gorillas.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-img-container">
+          <img src="img/nile-river.jpg" alt="The Nile River" class="feature-img">
+        </div>
+        <div class="feature-content">
+          <h3>The Mighty Nile</h3>
+          <p>Discover the source of the world's longest river at Jinja, where you can enjoy white-water rafting, kayaking, or a serene boat cruise along this historic waterway.</p>
+          <a href="#" class="btn">Explore Activities</a>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-img-container">
+          <img src="img/uganda-wildlife.jpg" alt="Uganda Wildlife" class="feature-img">
+        </div>
+        <div class="feature-content">
+          <h3>Diverse Wildlife</h3>
+          <p>Uganda's 10 national parks protect an incredible array of wildlife including the Big Five, chimpanzees, and over 1,000 bird species - a true birdwatcher's paradise.</p>
+          <a href="#" class="btn">View Safaris</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Attractions Section -->
+  <section class="attractions" id="destinations">
+    <div class="container">
+      <div class="section-title">
+        <h2>Must-Visit Destinations</h2>
+      </div>
+
+      <div class="attraction-grid">
+        <div class="attraction-card">
+          <img src="img/bwindi.jpg" alt="Bwindi Impenetrable Forest" class="attraction-img">
+          <div class="attraction-info">
+            <h3>Bwindi Impenetrable NP</h3>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Southwestern Uganda</p>
+            <p>UNESCO World Heritage Site famous for mountain gorilla trekking in its ancient rainforest.</p>
+          </div>
+        </div>
+
+        <div class="attraction-card">
+          <img src="img/murchison.jpg" alt="Murchison Falls" class="attraction-img">
+          <div class="attraction-info">
+            <h3>Murchison Falls NP</h3>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Northwestern Uganda</p>
+            <p>Where the Nile explodes through a narrow gorge creating one of Africa's most powerful waterfalls.</p>
+          </div>
+        </div>
+
+        <div class="attraction-card">
+          <img src="img/queen-elizabeth.jpg" alt="Queen Elizabeth NP" class="attraction-img">
+          <div class="attraction-info">
+            <h3>Queen Elizabeth NP</h3>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Western Uganda</p>
+            <p>Diverse ecosystems including savanna, forests, and lakes with tree-climbing lions and abundant wildlife.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>Traveler Experiences</h2>
+      </div>
+
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>Gorilla trekking in Uganda was the most profound wildlife experience of my life. Coming face-to-face with these gentle giants in their natural habitat was truly humbling and unforgettable.</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="img/traveler1.jpg" alt="Sarah Johnson" class="author-img">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Wildlife Photographer, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready for Your Ugandan Adventure?</h2>
+      <p>Let our travel experts help you plan the perfect itinerary tailored to your interests and budget.</p>
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <a href="#" class="btn btn-outline">Download Brochure</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Uganda Tourism</h3>
+          <p>Promoting Uganda's incredible natural beauty and cultural heritage to the world.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#">Travel Guides</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Information</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Uganda</a></li>
+            <li><a href="#">Visa Requirements</a></li>
+            <li><a href="#">Health & Safety</a></li>
+            <li><a href="#">Getting Around</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Uganda Tourism Board, Kampala</li>
+            <li><i class="fas fa-phone"></i> +256 414 342 196</li>
+            <li><i class="fas fa-envelope"></i> info@ugandatourism.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2023 Uganda Tourism Board. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
