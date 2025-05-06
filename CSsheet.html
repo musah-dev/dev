@@ -3,86 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cascading style sheet M.M</title>
+  <title>Uganda - The Pearl of Africa</title>
   <link href="Css.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-   <div id="header">
-     <p style="text-align: right;"><a href="#bottom">Go to Bottom</a></p><!--Thia is an example with CSS-->
+  <div class="container">
+    <p class="top-link"><a href="#bottom">Go to Bottom</a></p>
+    
+    <header>
+      <h1>PEARL OF AFRICA</h1>
+      <p class="subtitle">Discover the Beauty of Uganda</p>
+    </header>
 
-       <h1 id="page3">PEARL OF AFRICA</h1>
-       <img src="img/bty.jpg" alt="The Nile river" width="300" height="200" >
-       <hr>
-       <h2 id="nile">What county in East Africa have you ever been to?</h2>
-       <select name="east African countries" >
-       <option value="Uganda">Uganda </option>
-        <option value="Kenya">Kenya</option>
-        <option value="Tanzania">Tanzania</option>
+    <div class="feature-boxes">
+      <div class="feature-box">
+        <img src="img/bty.jpg" alt="The Nile river" class="feature-img">
+        <div class="img-overlay">
+          <div class="overlay-text">The Mighty Nile River</div>
+        </div>
+        <p class="box-content">The Nile, the world's longest river, begins its journey in Uganda. Experience breathtaking views and thrilling water activities.</p>
+        <button class="explore-btn">Explore Nile Tours</button>
+      </div>
+      
+      <div class="feature-box interactive-box">
+        <h2 id="nile">Plan Your East African Adventure</h2>
+        <select name="east African countries" class="country-selector">
+          <option value="">Select a country...</option>
+          <option value="Uganda">Uganda</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Tanzania">Tanzania</option>
+          <option value="Rwanda">Rwanda</option>
+        </select>
+        
+        <div class="country-info" id="uganda-info">
+          <h3>Why Visit Uganda?</h3>
+          <ul>
+            <li>Home to half of the world's mountain gorillas</li>
+            <li>Source of the Nile River</li>
+            <li>Over 1,000 bird species</li>
+            <li>Diverse cultures and friendly people</li>
+          </ul>
+        </div>
+        
+        <div class="newsletter">
+          <p>Get travel tips and special offers:</p>
+          <input type="email" placeholder="Your email address">
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
 
+    <section class="personal-story">
+      <p class="if">I live in the western part of Uganda. I was born in Uganda, and it's where I have spent most of my years. A proud <strong id="tribe">Nubian</strong>.</p>
+    </section>
 
-  </select>
-  <p class="if">I live in the western part of Uganda. I was born in Uganda, and it's where I have spent most of my years. A proud <strong id="tribe">Nubian</strong>.</p>
-  <hr>
-  <br>
-  <u id="in"><h3>What to Expect in Uganda</h3></u>
-  <p class="myraid">Uganda is a country with a myriad of impressive features. We have the best climate anyone could wish for. This is what is found in Uganda:</p>
-<br>
-  <ul style="text-align:center;">
-    <li>
-      <img src="img/mount.jpg" alt="Mountains" width="300" height="200">
-      Physical features
-      </li>
-      <br>
-     <li>
-      <img src="img/nile.jpg" alt="Source of the Nile River" width="300" height="200">
-      Source of the <strong> Nile</strong>
-     </li>
-   </div>
-     <br>
-  <!--this is the main body-->
-  <div id="main">
-    <li>
-      <img src="img/animal.jpg" alt="wildlife and nature" width="300" height="200" >
-      Wildlife and nature
-    </li>
-  </ul>
-</div>
-  <hr>
-  <br>
-  <h4>There Are Only 2 Places to Go If You Need Help in Uganda</h4>
-  <p><strong><em>Beware</em></strong>, never go to a policeman looking for help: ever. Go to these places:</p>
-  <ol>
-    <li>Hospitals
-      <ul>
-        <li><a href="https://mulagohospital.go.ug/">Mulago Hospital</a></li>
-        <li><a href="https://stfrancishospitalnsambya.org/wp/">Nsambya Hospital</a></li>
-      </ul>
-    </li>
-    <li>Markets</li>
-  </ol>
+    <hr class="section-divider">
 
-  <p>In Uganda, we have what we refer to as <em>BABWONGO</em>. They are often alongside roads; never interact with them.</p>
-  <hr id="hr">
-  <br>
-  <h5>WHAT WE CAN OFFER</h5>
-  <table>
-    <thead>
-      <tr>
-        <th colspan="2">Services Offered</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Entertainment</strong></td>
-        <td><strong>Education</strong></td>
-      </tr>
-      <tr>
-        <td>We offer the best video gaming experience with the latest PS5 and HDR screens</td>
-        <td>Everything a visitor needs to navigate Uganda is well indicated at our website. We offer courses on traveling and skills to navigate through a forest for free in the first month.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  <p id="bottom"><a href="index.html">page1</a></p> <p> <br><a href="bio.html" text-align="center">Page 2</a></p>
+    <section class="attractions">
+      <h3 id="in">What to Expect in Uganda</h3>
+      <p class="myraid">Uganda is a country with a myriad of impressive features. We have the best climate anyone could wish for. This is what is found in Uganda:</p>
+      
+      <div class="attraction-grid">
+        <div class="attraction-card">
+          <img src="img/mount.jpg" alt="Mountains" class="attraction-img">
+          <h4>Physical Features</h4>
+          <p>From the snow-capped Rwenzori Mountains to the vast Lake Victoria, Uganda's landscape will take your breath away.</p>
+          <button class="card-btn">View Hiking Tours</button>
+        </div>
+        
+        <div class="attraction-card">
+          <img src="img/nile.jpg" alt="Source of the Nile River" class="attraction-img">
+          <h4>Source of the <strong>Nile</strong></h4>
+          <p>Visit Jinja, the adventure capital, where the Nile begins its 6,650 km journey to the Mediterranean Sea.</p>
+          <button class="card-btn">Book River Safari</button>
+        </div>
+        
+        <div class="attraction-card">
+          <img src="img/animal.jpg" alt="wildlife and nature" class="attraction-img">
+          <h4>Wildlife and Nature</h4>
+          <p>10 national parks protecting lions, elephants, gorillas, and over 1,000 bird species await your discovery.</p>
+          <button class="card-btn">Plan Safari</button>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="travel-tips">
+      <h4>Important Travel Tips for Uganda</h4>
+      <p><strong><em>Beware</em></strong>, never go to a policeman looking for help: ever. Go to these places:</p>
+      
+      <div class="tip-container">
+        <div class="tip-box">
+          <h5>Hospitals</h5>
+          <ul>
+            <li><a href="https://mulagohospital.go.ug/" target="_blank">Mulago National Referral Hospital</a></li>
+            <li><a href="https://stfrancishospitalnsambya.org/wp/" target="_blank">Nsambya Hospital</a></li>
+          </ul>
+          <p>These hospitals provide reliable medical services for travelers. Always have travel insurance.</p>
+        </div>
+        
+        <div class="tip-box">
+          <h5>Markets</h5>
+          <p>Local markets are great for:</p>
+          <ul>
+            <li>Finding authentic crafts</li>
+            <li>Trying local foods</li>
+            <li>Getting directions</li>
+            <li>Experiencing Ugandan culture</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <p>In Uganda, we have what we refer to as <em>BABWONGO</em>. They are often alongside roads; never interact with them.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <div class="testimonial-boxes">
+      <div class="testimonial-box">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">This is it! I want you guys to come take a look at animals in their natural habitat. The gorilla trekking experience changed my life!</p>
+        <div class="testimonial-author">- Sarah K., UK Visitor</div>
+      </div>
+      
+      <div class="testimonial-box">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">From the inside out, I love it. It's persuasive and <a href="mailto:musahmahad01@gmail.com">alive</a> with energy. The people make you feel at home.</p>
+        <div class="testimonial-author">- Michael T., USA</div>
+      </div>
+    </div>
+
+    <section class="services">
+      <h5>WHAT WE CAN OFFER</h5>
+      <table class="services-table">
+        <thead>
+          <tr>
+            <th colspan="2">Services Offered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Entertainment</strong></td>
+            <td><strong>Education</strong></td>
+          </tr>
+          <tr>
+            <td>We offer the best video gaming experience with the latest PS5 and HDR screens in our Kampala entertainment center.</td>
+            <td>Everything a visitor needs to navigate Uganda is well indicated at our website. We offer courses on traveling and skills to navigate through a forest for free in the first month.</td>
+          </tr>
+          <tr>
+            <td>Nightlife tours showcasing Uganda's vibrant music scene</td>
+            <td>Cultural immersion programs with local communities</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer id="bottom">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="bio.html">About Uganda</a>
+        <a href="#nile">Plan Your Trip</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <p class="copyright">© 2023 Pearl of Africa Tourism. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
